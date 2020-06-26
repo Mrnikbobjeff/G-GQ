@@ -211,7 +211,7 @@ public interface ModelingPackage extends EPackage {
 	 * @see ggq.gql.impl.ModelingPackageImpl#getENamable()
 	 * @generated
 	 */
-	int ENAMABLE = 5;
+	int ENAMABLE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -239,80 +239,6 @@ public interface ModelingPackage extends EPackage {
 	 * @ordered
 	 */
 	int ENAMABLE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link ggq.gql.impl.EClassImpl <em>EClass</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ggq.gql.impl.EClassImpl
-	 * @see ggq.gql.impl.ModelingPackageImpl#getEClass()
-	 * @generated
-	 */
-	int ECLASS = 3;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECLASS__NAME = ENAMABLE__NAME;
-
-	/**
-	 * The number of structural features of the '<em>EClass</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECLASS_FEATURE_COUNT = ENAMABLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>EClass</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECLASS_OPERATION_COUNT = ENAMABLE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link ggq.gql.impl.EReferenceImpl <em>EReference</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ggq.gql.impl.EReferenceImpl
-	 * @see ggq.gql.impl.ModelingPackageImpl#getEReference()
-	 * @generated
-	 */
-	int EREFERENCE = 4;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREFERENCE__NAME = ENAMABLE__NAME;
-
-	/**
-	 * The number of structural features of the '<em>EReference</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREFERENCE_FEATURE_COUNT = ENAMABLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>EReference</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EREFERENCE_OPERATION_COUNT = ENAMABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link ggq.gql.Vertex <em>Vertex</em>}'.
@@ -420,26 +346,6 @@ public interface ModelingPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGraphQuery_ContainedEdges();
-
-	/**
-	 * Returns the meta object for class '{@link ggq.gql.EClass <em>EClass</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>EClass</em>'.
-	 * @see ggq.gql.EClass
-	 * @generated
-	 */
-	EClass getEClass();
-
-	/**
-	 * Returns the meta object for class '{@link ggq.gql.EReference <em>EReference</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>EReference</em>'.
-	 * @see ggq.gql.EReference
-	 * @generated
-	 */
-	EClass getEReference();
 
 	/**
 	 * Returns the meta object for class '{@link ggq.gql.ENamable <em>ENamable</em>}'.
@@ -570,26 +476,6 @@ public interface ModelingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GRAPH_QUERY__CONTAINED_EDGES = eINSTANCE.getGraphQuery_ContainedEdges();
-
-		/**
-		 * The meta object literal for the '{@link ggq.gql.impl.EClassImpl <em>EClass</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ggq.gql.impl.EClassImpl
-		 * @see ggq.gql.impl.ModelingPackageImpl#getEClass()
-		 * @generated
-		 */
-		EClass ECLASS = eINSTANCE.getEClass();
-
-		/**
-		 * The meta object literal for the '{@link ggq.gql.impl.EReferenceImpl <em>EReference</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ggq.gql.impl.EReferenceImpl
-		 * @see ggq.gql.impl.ModelingPackageImpl#getEReference()
-		 * @generated
-		 */
-		EClass EREFERENCE = eINSTANCE.getEReference();
 
 		/**
 		 * The meta object literal for the '{@link ggq.gql.impl.ENamableImpl <em>ENamable</em>}' class.

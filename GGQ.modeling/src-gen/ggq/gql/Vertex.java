@@ -2,6 +2,7 @@
  */
 package ggq.gql;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
 /**

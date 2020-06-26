@@ -2,7 +2,6 @@
  */
 package ggq.gql.impl;
 
-import ggq.gql.EClass;
 import ggq.gql.ModelingPackage;
 import ggq.gql.Vertex;
 
@@ -36,7 +35,7 @@ public class VertexImpl extends MinimalEObjectImpl.Container implements Vertex {
 	 * @generated
 	 * @ordered
 	 */
-	protected EClass type;
+	protected org.eclipse.emf.ecore.EClass type;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -83,10 +82,10 @@ public class VertexImpl extends MinimalEObjectImpl.Container implements Vertex {
 	 * @generated
 	 */
 	@Override
-	public EClass getType() {
+	public org.eclipse.emf.ecore.EClass getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject) type;
-			type = (EClass) eResolveProxy(oldType);
+			type = (org.eclipse.emf.ecore.EClass) eResolveProxy(oldType);
 			if (type != oldType) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelingPackage.VERTEX__TYPE, oldType,
@@ -101,7 +100,7 @@ public class VertexImpl extends MinimalEObjectImpl.Container implements Vertex {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass basicGetType() {
+	public org.eclipse.emf.ecore.EClass basicGetType() {
 		return type;
 	}
 
@@ -111,8 +110,8 @@ public class VertexImpl extends MinimalEObjectImpl.Container implements Vertex {
 	 * @generated
 	 */
 	@Override
-	public void setType(EClass newType) {
-		EClass oldType = type;
+	public void setType(org.eclipse.emf.ecore.EClass newType) {
+		org.eclipse.emf.ecore.EClass oldType = type;
 		type = newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelingPackage.VERTEX__TYPE, oldType, type));
@@ -168,7 +167,7 @@ public class VertexImpl extends MinimalEObjectImpl.Container implements Vertex {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case ModelingPackage.VERTEX__TYPE:
-			setType((EClass) newValue);
+			setType((org.eclipse.emf.ecore.EClass) newValue);
 			return;
 		case ModelingPackage.VERTEX__ID:
 			setId((String) newValue);
@@ -186,7 +185,7 @@ public class VertexImpl extends MinimalEObjectImpl.Container implements Vertex {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case ModelingPackage.VERTEX__TYPE:
-			setType((EClass) null);
+			setType((org.eclipse.emf.ecore.EClass) null);
 			return;
 		case ModelingPackage.VERTEX__ID:
 			setId(ID_EDEFAULT);

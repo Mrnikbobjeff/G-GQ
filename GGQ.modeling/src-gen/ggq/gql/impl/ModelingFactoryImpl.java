@@ -62,10 +62,6 @@ public class ModelingFactoryImpl extends EFactoryImpl implements ModelingFactory
 			return createEdge();
 		case ModelingPackage.GRAPH_QUERY:
 			return createGraphQuery();
-		case ModelingPackage.ECLASS:
-			return createEClass();
-		case ModelingPackage.EREFERENCE:
-			return createEReference();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -102,28 +98,6 @@ public class ModelingFactoryImpl extends EFactoryImpl implements ModelingFactory
 	public GraphQuery createGraphQuery() {
 		GraphQueryImpl graphQuery = new GraphQueryImpl();
 		return graphQuery;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ggq.gql.EClass createEClass() {
-		EClassImpl eClass = new EClassImpl();
-		return eClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference createEReference() {
-		EReferenceImpl eReference = new EReferenceImpl();
-		return eReference;
 	}
 
 	/**

@@ -49,24 +49,6 @@ public interface ModelingFactory extends EFactory {
 	GraphQuery createGraphQuery();
 
 	/**
-	 * Returns a new object of class '<em>EClass</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EClass</em>'.
-	 * @generated
-	 */
-	EClass createEClass();
-
-	/**
-	 * Returns a new object of class '<em>EReference</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EReference</em>'.
-	 * @generated
-	 */
-	EReference createEReference();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

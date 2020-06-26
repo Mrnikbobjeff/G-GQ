@@ -49,20 +49,6 @@ public class ModelingPackageImpl extends EPackageImpl implements ModelingPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass eClassEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass eReferenceEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass eNamableEClass = null;
 
 	/**
@@ -235,26 +221,6 @@ public class ModelingPackageImpl extends EPackageImpl implements ModelingPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getEClass() {
-		return eClassEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getEReference() {
-		return eReferenceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getENamable() {
 		return eNamableEClass;
 	}
@@ -312,10 +278,6 @@ public class ModelingPackageImpl extends EPackageImpl implements ModelingPackage
 		createEReference(graphQueryEClass, GRAPH_QUERY__CONTAINED_VERTICES);
 		createEReference(graphQueryEClass, GRAPH_QUERY__CONTAINED_EDGES);
 
-		eClassEClass = createEClass(ECLASS);
-
-		eReferenceEClass = createEClass(EREFERENCE);
-
 		eNamableEClass = createEClass(ENAMABLE);
 		createEAttribute(eNamableEClass, ENAMABLE__NAME);
 	}
@@ -349,14 +311,12 @@ public class ModelingPackageImpl extends EPackageImpl implements ModelingPackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		eClassEClass.getESuperTypes().add(this.getENamable());
-		eReferenceEClass.getESuperTypes().add(this.getENamable());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(vertexEClass, Vertex.class, "Vertex", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVertex_Type(), this.getEClass(), null, "type", null, 1, 1, Vertex.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
+		initEReference(getVertex_Type(), ecorePackage.getEClass(), null, "type", null, 1, 1, Vertex.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVertex_Id(), ecorePackage.getEString(), "id", null, 0, 1, Vertex.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -367,9 +327,9 @@ public class ModelingPackageImpl extends EPackageImpl implements ModelingPackage
 		initEReference(getEdge_Target(), this.getVertex(), null, "target", null, 1, 1, Edge.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getEdge_Type(), this.getEReference(), null, "type", null, 1, 1, Edge.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
+		initEReference(getEdge_Type(), ecorePackage.getEReference(), null, "type", null, 1, 1, Edge.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(graphQueryEClass, GraphQuery.class, "GraphQuery", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -379,12 +339,6 @@ public class ModelingPackageImpl extends EPackageImpl implements ModelingPackage
 		initEReference(getGraphQuery_ContainedEdges(), this.getEdge(), null, "containedEdges", null, 0, -1,
 				GraphQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(eClassEClass, ggq.gql.EClass.class, "EClass", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(eReferenceEClass, ggq.gql.EReference.class, "EReference", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(eNamableEClass, ENamable.class, "ENamable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getENamable_Name(), ecorePackage.getEString(), "name", null, 0, 1, ENamable.class, !IS_TRANSIENT,

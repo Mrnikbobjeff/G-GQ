@@ -87,24 +87,6 @@ public class ModelingSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ModelingPackage.ECLASS: {
-			EClass eClass = (EClass) theEObject;
-			T result = caseEClass(eClass);
-			if (result == null)
-				result = caseENamable(eClass);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case ModelingPackage.EREFERENCE: {
-			EReference eReference = (EReference) theEObject;
-			T result = caseEReference(eReference);
-			if (result == null)
-				result = caseENamable(eReference);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case ModelingPackage.ENAMABLE: {
 			ENamable eNamable = (ENamable) theEObject;
 			T result = caseENamable(eNamable);
@@ -159,36 +141,6 @@ public class ModelingSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGraphQuery(GraphQuery object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EClass</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EClass</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEClass(EClass object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EReference</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EReference</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEReference(EReference object) {
 		return null;
 	}
 

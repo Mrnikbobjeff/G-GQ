@@ -82,16 +82,6 @@ public class ModelingAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseEClass(EClass object) {
-			return createEClassAdapter();
-		}
-
-		@Override
-		public Adapter caseEReference(EReference object) {
-			return createEReferenceAdapter();
-		}
-
-		@Override
 		public Adapter caseENamable(ENamable object) {
 			return createENamableAdapter();
 		}
@@ -154,34 +144,6 @@ public class ModelingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGraphQueryAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ggq.gql.EClass <em>EClass</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ggq.gql.EClass
-	 * @generated
-	 */
-	public Adapter createEClassAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ggq.gql.EReference <em>EReference</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ggq.gql.EReference
-	 * @generated
-	 */
-	public Adapter createEReferenceAdapter() {
 		return null;
 	}
 
