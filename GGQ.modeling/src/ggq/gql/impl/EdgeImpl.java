@@ -9,6 +9,7 @@ import ggq.gql.Vertex;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -58,7 +59,7 @@ public class EdgeImpl extends MinimalEObjectImpl.Container implements Edge {
 	 * @generated
 	 * @ordered
 	 */
-	protected org.eclipse.emf.ecore.EReference type;
+	protected EReference type;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -167,10 +168,10 @@ public class EdgeImpl extends MinimalEObjectImpl.Container implements Edge {
 	 * @generated
 	 */
 	@Override
-	public org.eclipse.emf.ecore.EReference getType() {
+	public EReference getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject) type;
-			type = (org.eclipse.emf.ecore.EReference) eResolveProxy(oldType);
+			type = (EReference) eResolveProxy(oldType);
 			if (type != oldType) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelingPackage.EDGE__TYPE, oldType,
@@ -185,7 +186,7 @@ public class EdgeImpl extends MinimalEObjectImpl.Container implements Edge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.eclipse.emf.ecore.EReference basicGetType() {
+	public EReference basicGetType() {
 		return type;
 	}
 
@@ -195,8 +196,8 @@ public class EdgeImpl extends MinimalEObjectImpl.Container implements Edge {
 	 * @generated
 	 */
 	@Override
-	public void setType(org.eclipse.emf.ecore.EReference newType) {
-		org.eclipse.emf.ecore.EReference oldType = type;
+	public void setType(EReference newType) {
+		EReference oldType = type;
 		type = newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelingPackage.EDGE__TYPE, oldType, type));
@@ -241,7 +242,7 @@ public class EdgeImpl extends MinimalEObjectImpl.Container implements Edge {
 			setTarget((Vertex) newValue);
 			return;
 		case ModelingPackage.EDGE__TYPE:
-			setType((org.eclipse.emf.ecore.EReference) newValue);
+			setType((EReference) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -262,7 +263,7 @@ public class EdgeImpl extends MinimalEObjectImpl.Container implements Edge {
 			setTarget((Vertex) null);
 			return;
 		case ModelingPackage.EDGE__TYPE:
-			setType((org.eclipse.emf.ecore.EReference) null);
+			setType((EReference) null);
 			return;
 		}
 		super.eUnset(featureID);
