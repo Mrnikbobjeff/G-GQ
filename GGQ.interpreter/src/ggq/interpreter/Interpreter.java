@@ -3,6 +3,7 @@ package ggq.interpreter;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -19,30 +20,31 @@ public class Interpreter {
 		return collection.stream().filter(obj -> obj != without).collect(Collectors.toList());
 	}
 	
-	static private Stream<Map<Vertex, EObject>> generatePossibleMappings(Collection<EObject> host, GraphQuery query, int queryNodesIndex) {
-		if (queryNodesIndex >= query.getContainedVertices().size()) {
+	static private <T> List<T> tail(List<T> list) {
+		return list.subList(1, list.size());
+	}
+	
+	static private Stream<Map<Vertex, EObject>> generatePossibleMappings(Collection<EObject> host, List<Vertex> vertices) {
+		if (vertices.isEmpty()) {
 			Map<Vertex, EObject> emptyMapping = new HashMap<>(); 
 			return Stream.of(emptyMapping);
 		}
 		
-		Vertex node = query.getContainedVertices().get(queryNodesIndex);
+		Vertex node = vertices.get(0);
 		return host.stream().flatMap(eobject -> {
 			if (eobject.eClass() != node.getType()) {
 				Stream<Map<Vertex, EObject>> noValidMappings = Stream.empty();
 				return noValidMappings;
 			}
 			
-			Collection<EObject> hostWithoutThisEObject = copyWithoutObject(host, eobject); 
-			Stream<Map<Vertex, EObject>> mappingsForRestOfQuery = generatePossibleMappings(hostWithoutThisEObject, query, queryNodesIndex + 1);
+			Collection<EObject> hostWithoutThisEObject = copyWithoutObject(host, eobject);
+			
+			Stream<Map<Vertex, EObject>> mappingsForRestOfQuery = generatePossibleMappings(hostWithoutThisEObject, tail(vertices));
 			return mappingsForRestOfQuery.map(mapping -> {
 				mapping.put(node, eobject);
 				return mapping;
 			});
 		});
-	}
-	
-	static private Stream<Map<Vertex, EObject>> generatePossibleMappings(Collection<EObject> host, GraphQuery query) {
-		return generatePossibleMappings(host, query, 0);
 	}
 	
 	static private boolean isEdgeInMapping(Map<Vertex, EObject> mapping, Edge edge) {
@@ -64,7 +66,7 @@ public class Interpreter {
 	}
 	
 	static Stream<Map<Vertex, EObject>> match(Collection<EObject> host, GraphQuery query) {
-		return generatePossibleMappings(host, query).filter(mapping -> isMappingAMatch(mapping, query.getContainedEdges()));
+		return generatePossibleMappings(host, query.getContainedVertices()).filter(mapping -> isMappingAMatch(mapping, query.getContainedEdges()));
 	}
 	
 }
