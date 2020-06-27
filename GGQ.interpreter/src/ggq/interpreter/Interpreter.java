@@ -42,7 +42,7 @@ public class Interpreter {
 			
 			Stream<Map<Vertex, EObject>> mappingsForRestOfQuery = generatePossibleMappings(hostWithoutThisEObject, tail(vertices));
 			return mappingsForRestOfQuery.map(mapping -> {
-				mapping.put(node, eobject);
+				mapping.put(node, eobject); // mutation only happens bottom-up, so this is okay 
 				return mapping;
 			});
 		});
