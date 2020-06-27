@@ -21,13 +21,15 @@ public class Interpreter {
 	
 	static private Stream<Map<Vertex, EObject>> generatePossibleMappings(Collection<EObject> host, GraphQuery query, int queryNodesIndex) {
 		if (queryNodesIndex >= query.getContainedVertices().size()) {
-			return Stream.of(new HashMap<>());
+			Map<Vertex, EObject> emptyMapping = new HashMap<>(); 
+			return Stream.of(emptyMapping);
 		}
 		
 		Vertex node = query.getContainedVertices().get(queryNodesIndex);
 		return host.stream().flatMap(eobject -> {
 			if (eobject.eClass() != node.getType()) {
-				return Stream.empty();
+				Stream<Map<Vertex, EObject>> noValidMappings = Stream.empty();
+				return noValidMappings;
 			}
 			
 			Collection<EObject> hostWithoutThisEObject = copyWithoutObject(host, eobject); 
@@ -43,20 +45,22 @@ public class Interpreter {
 		return generatePossibleMappings(host, query, 0);
 	}
 	
+	static private boolean isEdgeInMapping(Map<Vertex, EObject> mapping, Edge edge) {
+		Vertex source = edge.getSource();
+		Vertex target = edge.getTarget();
+		EReference type = edge.getType();
+		
+		EObject mappedSource = mapping.get(source);
+		EObject mappedTarget = mapping.get(target);
+		
+		List<EObject> referencedTargets = (List<EObject>) mappedSource.eGet(type);
+		boolean thereIsAMatchingRefInHostGraph = referencedTargets.contains(mappedTarget);
+		
+		return thereIsAMatchingRefInHostGraph;
+	}
+	
 	static private boolean isMappingAMatch(Map<Vertex, EObject> mapping, Collection<Edge> queryEdges) {
-		return queryEdges.stream().allMatch(edge-> {
-			Vertex source = edge.getSource();
-			Vertex target = edge.getTarget();
-			EReference type = edge.getType();
-			
-			EObject mappedSource = mapping.get(source);
-			EObject mappedTarget = mapping.get(target);
-			
-			List<EObject> referencedTargets = (List<EObject>) mappedSource.eGet(type);
-			boolean thereIsAMatchingRefInHostGraph = referencedTargets.contains(mappedTarget);
-			
-			return thereIsAMatchingRefInHostGraph;
-		});
+		return queryEdges.stream().allMatch(edge-> isEdgeInMapping(mapping, edge));
 	}
 	
 	static Stream<Map<Vertex, EObject>> match(Collection<EObject> host, GraphQuery query) {
