@@ -16,7 +16,7 @@ import ggq.gql.*;
 
 public class Interpreter {
 	
-	static private <T> Collection<T> copyWithoutObject(Collection<T> collection, T without) {
+	static private <T> Collection<T> without(Collection<T> collection, T without) {
 		return collection.stream().filter(obj -> obj != without).collect(Collectors.toList());
 	}
 	
@@ -37,7 +37,7 @@ public class Interpreter {
 				return noValidMappings;
 			}
 			
-			Collection<EObject> hostWithoutThisEObject = copyWithoutObject(host, eobject);
+			Collection<EObject> hostWithoutThisEObject = without(host, eobject);
 			
 			Stream<Map<Vertex, EObject>> mappingsForRestOfQuery = generatePossibleMappings(hostWithoutThisEObject, tail(vertices));
 			return mappingsForRestOfQuery.map(mapping -> {
