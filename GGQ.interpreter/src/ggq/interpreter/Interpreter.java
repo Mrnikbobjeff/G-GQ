@@ -1,8 +1,10 @@
 package ggq.interpreter;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -22,6 +24,12 @@ public class Interpreter {
 	
 	static private <T> List<T> tail(List<T> list) {
 		return list.subList(1, list.size());
+	}
+	
+	static private <T> Collection<T> collectIterator(Iterator<T> it) {
+		List<T> result = new ArrayList<T>();
+	    it.forEachRemaining(result::add);
+	    return result;
 	}
 	
 	static private boolean isInstanceOfClass(EObject object, EClass clazz) {
@@ -90,6 +98,11 @@ public class Interpreter {
 	
 	static Stream<Map<Vertex, EObject>> match(Collection<EObject> host, GraphQuery query) {
 		return generatePossibleMappings(host, query.getContainedVertices()).filter(mapping -> isMappingAMatch(mapping, query.getContainedEdges()));
+	}
+	
+	static Stream<Map<Vertex, EObject>> match(EObject host, GraphQuery query) {
+		Collection<EObject> hostObjects = collectIterator(host.eAllContents());
+		return match(hostObjects, query);
 	}
 	
 }
