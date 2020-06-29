@@ -25,7 +25,12 @@ public class Interpreter {
 	}
 	
 	static private boolean isInstanceOfClass(EObject object, EClass clazz) {
-		return object.eClass() == clazz;
+		if (object.eClass() == clazz) {
+			return true;
+		}
+		
+		List<EClass> acceptableTypes = clazz.getEAllSuperTypes();
+		return acceptableTypes.contains(object.eClass());
 	}
 	
 	static private Stream<Map<Vertex, EObject>> generatePossibleMappings(Collection<EObject> host, List<Vertex> vertices) {
