@@ -33,7 +33,7 @@ public class Interpreter {
 		Vertex node = vertices.get(0);
 		return host.stream().flatMap(eobject -> {
 			boolean eobjectMatchesType = eobject.eClass() == node.getType(); 
-			if (eobjectMatchesType) {
+			if (!eobjectMatchesType) {
 				Stream<Map<Vertex, EObject>> noValidMappings = Stream.empty();
 				return noValidMappings;
 			}
