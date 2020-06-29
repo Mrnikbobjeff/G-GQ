@@ -49,7 +49,17 @@ public class Interpreter {
 	}
 	
 	static private List<EObject> getReferenceTargets(EObject source, EReference reference) {
+		if (!reference.isMany()) {
+			EObject target = (EObject) source.eGet(reference);
+			if (target == null) {
+				return Collections.emptyList();
+			}
+			
+			return Collections.singletonList(target);		
+		}
+		
 		return (List<EObject>) source.eGet(reference);
+		
 	}
 	
 	static private boolean isEdgeInMapping(Map<Vertex, EObject> mapping, Edge edge) {
