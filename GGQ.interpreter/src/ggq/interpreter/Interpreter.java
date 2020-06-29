@@ -48,6 +48,10 @@ public class Interpreter {
 		});
 	}
 	
+	static private List<EObject> getReferenceTargets(EObject source, EReference reference) {
+		return (List<EObject>) source.eGet(reference);
+	}
+	
 	static private boolean isEdgeInMapping(Map<Vertex, EObject> mapping, Edge edge) {
 		Vertex source = edge.getSource();
 		Vertex target = edge.getTarget();
@@ -56,7 +60,7 @@ public class Interpreter {
 		EObject mappedSource = mapping.get(source);
 		EObject mappedTarget = mapping.get(target);
 		
-		List<EObject> referencedTargets = (List<EObject>) mappedSource.eGet(type);
+		List<EObject> referencedTargets = getReferenceTargets(mappedSource, type);
 		boolean thereIsAMatchingRefInHostGraph = referencedTargets.contains(mappedTarget);
 		
 		return thereIsAMatchingRefInHostGraph;
