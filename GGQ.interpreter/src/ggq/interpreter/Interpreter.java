@@ -67,8 +67,7 @@ public class Interpreter {
 			return Collections.singletonList(target);		
 		}
 		
-		return (List<EObject>) source.eGet(reference);
-		
+		return (List<EObject>) source.eGet(reference);		
 	}
 	
 	static private boolean isEdgeInMapping(Map<Vertex, EObject> mapping, Edge edge) {
