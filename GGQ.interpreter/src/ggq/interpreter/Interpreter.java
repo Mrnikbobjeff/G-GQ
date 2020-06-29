@@ -24,6 +24,10 @@ public class Interpreter {
 		return list.subList(1, list.size());
 	}
 	
+	static private boolean isInstanceOfClass(EObject object, EClass clazz) {
+		return object.eClass() == clazz;
+	}
+	
 	static private Stream<Map<Vertex, EObject>> generatePossibleMappings(Collection<EObject> host, List<Vertex> vertices) {
 		if (vertices.isEmpty()) {
 			Map<Vertex, EObject> emptyMapping = new HashMap<>(); 
@@ -32,7 +36,7 @@ public class Interpreter {
 		
 		Vertex node = vertices.get(0);
 		return host.stream().flatMap(eobject -> {
-			boolean eobjectMatchesType = eobject.eClass() == node.getType(); 
+			boolean eobjectMatchesType = isInstanceOfClass(eobject, node.getType()); 
 			if (!eobjectMatchesType) {
 				Stream<Map<Vertex, EObject>> noValidMappings = Stream.empty();
 				return noValidMappings;
