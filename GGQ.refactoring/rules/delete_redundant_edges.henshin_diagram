@@ -56,6 +56,16 @@
         <element xmi:type="henshin:Node" href="delete_redundant_edges.henshin#_T4U0YLq4EeqqH_m5Zy8E_Q"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4WCgbq4EeqqH_m5Zy8E_Q" x="20" y="192"/>
       </children>
+      <children xmi:type="notation:Shape" xmi:id="_SUw6cLq5EeqqH_m5Zy8E_Q" type="3001" fontName=".AppleSystemUIFont">
+        <children xmi:type="notation:DecorationNode" xmi:id="_SUw6crq5EeqqH_m5Zy8E_Q" type="5002"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_SUw6c7q5EeqqH_m5Zy8E_Q" type="5003"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_SUw6dLq5EeqqH_m5Zy8E_Q" type="7002">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_SUw6dbq5EeqqH_m5Zy8E_Q"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_SUw6drq5EeqqH_m5Zy8E_Q"/>
+        </children>
+        <element xmi:type="henshin:Node" href="delete_redundant_edges.henshin#_SUueMLq5EeqqH_m5Zy8E_Q"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SUw6cbq5EeqqH_m5Zy8E_Q" x="136" y="2"/>
+      </children>
     </children>
     <element xmi:type="henshin:Rule" href="delete_redundant_edges.henshin#_DN43YLq4EeqqH_m5Zy8E_Q"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DN6Fgbq4EeqqH_m5Zy8E_Q" x="245" y="171" width="362" height="269"/>
@@ -132,5 +142,17 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_aEJdcbq4EeqqH_m5Zy8E_Q" fontName=".AppleSystemUIFont"/>
     <element xmi:type="henshin:Edge" href="delete_redundant_edges.henshin#_aEI2YLq4EeqqH_m5Zy8E_Q"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_aEJdcrq4EeqqH_m5Zy8E_Q" points="[-27, 2, 96, 2]$[-117, 20, 6, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_UszI0Lq5EeqqH_m5Zy8E_Q" type="4001" source="_SUw6cLq5EeqqH_m5Zy8E_Q" target="_JD2lMLq4EeqqH_m5Zy8E_Q">
+    <children xmi:type="notation:DecorationNode" xmi:id="_UszI07q5EeqqH_m5Zy8E_Q" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_UszI1Lq5EeqqH_m5Zy8E_Q" x="-24" y="36"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_UszI1bq5EeqqH_m5Zy8E_Q" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_UszI1rq5EeqqH_m5Zy8E_Q" x="-33" y="50"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_UszI0bq5EeqqH_m5Zy8E_Q" fontName=".AppleSystemUIFont"/>
+    <element xmi:type="henshin:Edge" href="delete_redundant_edges.henshin#_UsyhwLq5EeqqH_m5Zy8E_Q"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_UszI0rq5EeqqH_m5Zy8E_Q" points="[-2, 32, -10, -103]$[-14, 136, -22, 1]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Us0W8Lq5EeqqH_m5Zy8E_Q" id="(0.36065573770491804,0.2)"/>
   </edges>
 </notation:Diagram>
