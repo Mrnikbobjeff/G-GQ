@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description" uid="_uQFQUMEQEeqTL8k1SseAsw" selectedViews="_sMH_EMEREeq2mofwSOLahA" version="14.3.0.201909031200">
+  <semanticResources>floating_edges.gql</semanticResources>
+  <semanticResources>redundant_edges.gql</semanticResources>
+  <semanticResources>ambiguous_ids.gql</semanticResources>
+  <semanticResources>platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign</semanticResources>
+  <semanticResources>environment:/viewpoint</semanticResources>
+  <semanticResources>platform:/resource/GGQ.modeling/model/modeling.genmodel</semanticResources>
+  <semanticResources>platform:/resource/GGQ.modeling/model/modeling.ecore</semanticResources>
+  <ownedViews xmi:type="viewpoint:DView" uid="_sMH_EMEREeq2mofwSOLahA">
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
+  </ownedViews>
+</viewpoint:DAnalysis>
