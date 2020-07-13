@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="GGQ" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="GGQ" version="12.0.0.2017041100">
   <ownedViewpoints name="GQL Viewpoint">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Gql Diagram" domainClass="gql::GraphQuery" enablePopupBars="true">
       <defaultLayer name="Default">
-        <edgeMappings name="Edge" sourceMapping="//@ownedViewpoints[name='GQL%20Viewpoint']/@ownedRepresentations[name='Gql%20Diagram']/@defaultLayer/@containerMappings[name='Vertex']" targetMapping="//@ownedViewpoints[name='GQL%20Viewpoint']/@ownedRepresentations[name='Gql%20Diagram']/@defaultLayer/@containerMappings[name='Vertex']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="gql::Edge" useDomainElement="true">
+        <edgeMappings name="Edge" sourceMapping="//@ownedViewpoints[name='GQL%20Viewpoint']/@ownedRepresentations[name='Gql%20Diagram']/@defaultLayer/@containerMappings[name='Vertex%20Container']" targetMapping="//@ownedViewpoints[name='GQL%20Viewpoint']/@ownedRepresentations[name='Gql%20Diagram']/@defaultLayer/@containerMappings[name='Vertex%20Container']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="gql::Edge" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -11,13 +11,38 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="Vertex" domainClass="gql::Vertex"/>
+        <containerMappings name="Vertex Container" semanticCandidatesExpression="feature:containedVertices" domainClass="gql::Vertex">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="feature:id">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
         <toolSections>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Vertex">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create Vertex" containerMappings="//@ownedViewpoints[name='GQL%20Viewpoint']/@ownedRepresentations[name='Gql%20Diagram']/@defaultLayer/@containerMappings[name='Vertex%20Container']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="gql::Vertex" referenceName="containedVertices"/>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gql::Vertex" referenceName="containedVertices" variableName="newVertex">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="container" valueExpression="var:container"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Edge" edgeMappings="//@ownedViewpoints[name='GQL%20Viewpoint']/@ownedRepresentations[name='Gql%20Diagram']/@defaultLayer/@edgeMappings[name='Edge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source.container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gql::Edge" referenceName="containedEdges">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                </subModelOperations>
+              </firstModelOperations>
             </initialOperation>
           </ownedTools>
         </toolSections>
