@@ -4,9 +4,29 @@
 
 TODO: Metamodel & Sirius editor
 
-## 2.
+## 2. Refactoring & Repair
 
-TODO: Refactoring rules
+### Delete redundant edges
+
+![Delete redundant edges](./assets/delete_redundant_edges_rule.png)
+
+Observations:
+- simple rule, similar to the exercise tasks
+
+### Delete floating edges
+
+![Delete floating edges](./assets/delete_floating_edges_rule.png)
+
+Observations:
+- `<<forbid>>` is new
+
+### Resolve amibiguous IDs
+
+![Resolve ambiguous IDs](./assets/resolve_ambiguous_ids_rule.png)
+
+Observations:
+- *OUT parameters* are new
+- *Conditions* are new
 
 ## 3. Interpreter
 
@@ -61,3 +81,6 @@ generateMappings(
 ## 4.
 
 TODO: Henshin Transformation
+
+## Résumé
+
