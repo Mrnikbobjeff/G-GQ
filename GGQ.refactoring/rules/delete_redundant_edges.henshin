@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_C0pQ8Lq4EeqqH_m5Zy8E_Q">
+  <imports href="../../GGQ.modeling/model/modeling.ecore#/"/>
+  <imports href="http://www.eclipse.org/emf/2002/Ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_DN43YLq4EeqqH_m5Zy8E_Q" name="Delete Redundant Edges">
+    <lhs xmi:id="_DN76sLq4EeqqH_m5Zy8E_Q" name="Lhs">
+      <nodes xmi:id="_HM8G4Lq4EeqqH_m5Zy8E_Q" incoming="_KyqQYLq4EeqqH_m5Zy8E_Q _NfbYoLq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Vertex"/>
+      </nodes>
+      <nodes xmi:id="_HbQ2wLq4EeqqH_m5Zy8E_Q" incoming="_LMo2oLq4EeqqH_m5Zy8E_Q _N3susLq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Vertex"/>
+      </nodes>
+      <nodes xmi:id="_JD1XELq4EeqqH_m5Zy8E_Q" incoming="_UsyhwLq5EeqqH_m5Zy8E_Q" outgoing="_KyqQYLq4EeqqH_m5Zy8E_Q _LMo2oLq4EeqqH_m5Zy8E_Q _ZxdyALq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Edge"/>
+      </nodes>
+      <nodes xmi:id="_JUHOwLq4EeqqH_m5Zy8E_Q" outgoing="_NfbYoLq4EeqqH_m5Zy8E_Q _N3susLq4EeqqH_m5Zy8E_Q _aEI2YLq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Edge"/>
+      </nodes>
+      <nodes xmi:id="_T4U0YLq4EeqqH_m5Zy8E_Q" incoming="_ZxdyALq4EeqqH_m5Zy8E_Q _aEI2YLq4EeqqH_m5Zy8E_Q">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
+      </nodes>
+      <nodes xmi:id="_SUueMLq5EeqqH_m5Zy8E_Q" outgoing="_UsyhwLq5EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//GraphQuery"/>
+      </nodes>
+      <edges xmi:id="_KyqQYLq4EeqqH_m5Zy8E_Q" source="_JD1XELq4EeqqH_m5Zy8E_Q" target="_HM8G4Lq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Edge/source"/>
+      </edges>
+      <edges xmi:id="_LMo2oLq4EeqqH_m5Zy8E_Q" source="_JD1XELq4EeqqH_m5Zy8E_Q" target="_HbQ2wLq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Edge/target"/>
+      </edges>
+      <edges xmi:id="_NfbYoLq4EeqqH_m5Zy8E_Q" source="_JUHOwLq4EeqqH_m5Zy8E_Q" target="_HM8G4Lq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Edge/source"/>
+      </edges>
+      <edges xmi:id="_N3susLq4EeqqH_m5Zy8E_Q" source="_JUHOwLq4EeqqH_m5Zy8E_Q" target="_HbQ2wLq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Edge/target"/>
+      </edges>
+      <edges xmi:id="_ZxdyALq4EeqqH_m5Zy8E_Q" source="_JD1XELq4EeqqH_m5Zy8E_Q" target="_T4U0YLq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Edge/type"/>
+      </edges>
+      <edges xmi:id="_aEI2YLq4EeqqH_m5Zy8E_Q" source="_JUHOwLq4EeqqH_m5Zy8E_Q" target="_T4U0YLq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Edge/type"/>
+      </edges>
+      <edges xmi:id="_UsyhwLq5EeqqH_m5Zy8E_Q" source="_SUueMLq5EeqqH_m5Zy8E_Q" target="_JD1XELq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//GraphQuery/containedEdges"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_DN76sbq4EeqqH_m5Zy8E_Q" name="Rhs">
+      <nodes xmi:id="_HM8G4bq4EeqqH_m5Zy8E_Q" incoming="_NfbYobq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Vertex"/>
+      </nodes>
+      <nodes xmi:id="_HbQ2wbq4EeqqH_m5Zy8E_Q" incoming="_N3susbq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Vertex"/>
+      </nodes>
+      <nodes xmi:id="_JUHOwbq4EeqqH_m5Zy8E_Q" outgoing="_NfbYobq4EeqqH_m5Zy8E_Q _N3susbq4EeqqH_m5Zy8E_Q _aEI2Ybq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Edge"/>
+      </nodes>
+      <nodes xmi:id="_T4VbcLq4EeqqH_m5Zy8E_Q" incoming="_aEI2Ybq4EeqqH_m5Zy8E_Q">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
+      </nodes>
+      <nodes xmi:id="_TwJ6YLq5EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//GraphQuery"/>
+      </nodes>
+      <edges xmi:id="_NfbYobq4EeqqH_m5Zy8E_Q" source="_JUHOwbq4EeqqH_m5Zy8E_Q" target="_HM8G4bq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Edge/source"/>
+      </edges>
+      <edges xmi:id="_N3susbq4EeqqH_m5Zy8E_Q" source="_JUHOwbq4EeqqH_m5Zy8E_Q" target="_HbQ2wbq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Edge/target"/>
+      </edges>
+      <edges xmi:id="_aEI2Ybq4EeqqH_m5Zy8E_Q" source="_JUHOwbq4EeqqH_m5Zy8E_Q" target="_T4VbcLq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Edge/type"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_HM8G4rq4EeqqH_m5Zy8E_Q" origin="_HM8G4Lq4EeqqH_m5Zy8E_Q" image="_HM8G4bq4EeqqH_m5Zy8E_Q"/>
+    <mappings xmi:id="_HbQ2wrq4EeqqH_m5Zy8E_Q" origin="_HbQ2wLq4EeqqH_m5Zy8E_Q" image="_HbQ2wbq4EeqqH_m5Zy8E_Q"/>
+    <mappings xmi:id="_JUHOwrq4EeqqH_m5Zy8E_Q" origin="_JUHOwLq4EeqqH_m5Zy8E_Q" image="_JUHOwbq4EeqqH_m5Zy8E_Q"/>
+    <mappings xmi:id="_T4Vbcbq4EeqqH_m5Zy8E_Q" origin="_T4U0YLq4EeqqH_m5Zy8E_Q" image="_T4VbcLq4EeqqH_m5Zy8E_Q"/>
+    <mappings xmi:id="_TwJ6Ybq5EeqqH_m5Zy8E_Q" origin="_SUueMLq5EeqqH_m5Zy8E_Q" image="_TwJ6YLq5EeqqH_m5Zy8E_Q"/>
+  </units>
+</henshin:Module>

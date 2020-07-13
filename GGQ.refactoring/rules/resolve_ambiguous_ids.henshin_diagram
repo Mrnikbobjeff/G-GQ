@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmi:id="_CHGq8Lq3EeqqH_m5Zy8E_Q" type="Henshin" name="resolve_ambiguous_ids.henshin_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_Cp8SQLq3EeqqH_m5Zy8E_Q" type="2001" fontName=".AppleSystemUIFont" italic="true" lineColor="0">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_IAAYA7q3EeqqH_m5Zy8E_Q" source="defaultAction">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_IAA_ELq3EeqqH_m5Zy8E_Q" key="value" value="preserve"/>
+    </eAnnotations>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cp8SQrq3EeqqH_m5Zy8E_Q" type="5001"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cp85ULq3EeqqH_m5Zy8E_Q" type="7001">
+      <children xmi:type="notation:Shape" xmi:id="_IABmILq3EeqqH_m5Zy8E_Q" type="3001" fontName=".AppleSystemUIFont">
+        <children xmi:type="notation:DecorationNode" xmi:id="_IACNMLq3EeqqH_m5Zy8E_Q" type="5002"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_IACNMbq3EeqqH_m5Zy8E_Q" type="5003"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_IACNMrq3EeqqH_m5Zy8E_Q" type="7002">
+          <children xmi:type="notation:Node" xmi:id="_J6uYQLq3EeqqH_m5Zy8E_Q" type="3002">
+            <element xmi:type="henshin:Attribute" href="resolve_ambiguous_ids.henshin#_J6tKILq3EeqqH_m5Zy8E_Q"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_J6uYQbq3EeqqH_m5Zy8E_Q"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_IACNM7q3EeqqH_m5Zy8E_Q"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_IACNNLq3EeqqH_m5Zy8E_Q"/>
+        </children>
+        <element xmi:type="henshin:Node" href="resolve_ambiguous_ids.henshin#_IAAYALq3EeqqH_m5Zy8E_Q"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IABmIbq3EeqqH_m5Zy8E_Q" x="30" y="24"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_ItUxALq3EeqqH_m5Zy8E_Q" type="3001" fontName=".AppleSystemUIFont">
+        <children xmi:type="notation:DecorationNode" xmi:id="_ItVYELq3EeqqH_m5Zy8E_Q" type="5002"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_ItVYEbq3EeqqH_m5Zy8E_Q" type="5003"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_ItVYErq3EeqqH_m5Zy8E_Q" type="7002">
+          <children xmi:type="notation:Node" xmi:id="_Zta08Lq3EeqqH_m5Zy8E_Q" type="3002">
+            <element xmi:type="henshin:Attribute" href="resolve_ambiguous_ids.henshin#_ZtaN4Lq3EeqqH_m5Zy8E_Q"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Zta08bq3EeqqH_m5Zy8E_Q"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_ItVYE7q3EeqqH_m5Zy8E_Q"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_ItVYFLq3EeqqH_m5Zy8E_Q"/>
+        </children>
+        <element xmi:type="henshin:Node" href="resolve_ambiguous_ids.henshin#_ItUJ8Lq3EeqqH_m5Zy8E_Q"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ItUxAbq3EeqqH_m5Zy8E_Q" x="137" y="24"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_gucnsLq3EeqqH_m5Zy8E_Q" type="3005">
+        <children xmi:type="notation:DecorationNode" xmi:id="_gucntLq3EeqqH_m5Zy8E_Q" type="5006"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_gucntbq3EeqqH_m5Zy8E_Q" type="5007"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_gucnsbq3EeqqH_m5Zy8E_Q"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_gucnsrq3EeqqH_m5Zy8E_Q" fontName=".AppleSystemUIFont"/>
+        <element xmi:type="henshin:AttributeCondition" href="resolve_ambiguous_ids.henshin#_gucAoLq3EeqqH_m5Zy8E_Q"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gucns7q3EeqqH_m5Zy8E_Q" x="58" y="115"/>
+      </children>
+    </children>
+    <element xmi:type="henshin:Rule" href="resolve_ambiguous_ids.henshin#_Cp6dELq3EeqqH_m5Zy8E_Q"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cp8SQbq3EeqqH_m5Zy8E_Q" x="311" y="121"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_CHGq8bq3EeqqH_m5Zy8E_Q"/>
+  <element xmi:type="henshin:Module" href="resolve_ambiguous_ids.henshin#_CHGD4Lq3EeqqH_m5Zy8E_Q"/>
+</notation:Diagram>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<modeling:GraphQuery xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:modeling="http://www.example.org/modeling">
+  <containedVertices id="1"/>
+  <containedVertices id="2"/>
+  <containedEdges source="1" target="2">
+    <type href="../../GGQ.modeling/model/modeling.ecore#//Edge/type"/>
+  </containedEdges>
+  <containedEdges source="1" target="2">
+    <type href="../../GGQ.modeling/model/modeling.ecore#//Edge/type"/>
+  </containedEdges>
+</modeling:GraphQuery>

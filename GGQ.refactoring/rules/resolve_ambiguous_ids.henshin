@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_CHGD4Lq3EeqqH_m5Zy8E_Q">
+  <imports href="../../GGQ.modeling/model/modeling.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_Cp6dELq3EeqqH_m5Zy8E_Q" name="Resolve Ambiguous IDs">
+    <parameters xmi:id="_0uAHQMEWEeqIKMxTl8VJXQ" name="x" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_2j7uIMEWEeqIKMxTl8VJXQ" name="y" kind="OUT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_Cp-HcLq3EeqqH_m5Zy8E_Q" name="Lhs">
+      <nodes xmi:id="_IAAYALq3EeqqH_m5Zy8E_Q" name="v1">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Vertex"/>
+        <attributes xmi:id="_J6tKILq3EeqqH_m5Zy8E_Q" value="x">
+          <type href="../../GGQ.modeling/model/modeling.ecore#//Vertex/id"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ItUJ8Lq3EeqqH_m5Zy8E_Q" name="v2">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Vertex"/>
+        <attributes xmi:id="_ZtaN4Lq3EeqqH_m5Zy8E_Q" value="y">
+          <type href="../../GGQ.modeling/model/modeling.ecore#//Vertex/id"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_Cp-Hcbq3EeqqH_m5Zy8E_Q" name="Rhs">
+      <nodes xmi:id="_IAAYAbq3EeqqH_m5Zy8E_Q" name="v1">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Vertex"/>
+        <attributes xmi:id="_J6txMLq3EeqqH_m5Zy8E_Q" value="x">
+          <type href="../../GGQ.modeling/model/modeling.ecore#//Vertex/id"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ItUJ8bq3EeqqH_m5Zy8E_Q" name="v2">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Vertex"/>
+        <attributes xmi:id="_ZtaN4bq3EeqqH_m5Zy8E_Q" value="y + &quot;_1&quot;">
+          <type href="../../GGQ.modeling/model/modeling.ecore#//Vertex/id"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <attributeConditions xmi:id="_gucAoLq3EeqqH_m5Zy8E_Q" name="IDs are ambiguous" description="" conditionText="x == y"/>
+    <mappings xmi:id="_IAAYArq3EeqqH_m5Zy8E_Q" origin="_IAAYALq3EeqqH_m5Zy8E_Q" image="_IAAYAbq3EeqqH_m5Zy8E_Q"/>
+    <mappings xmi:id="_ItUJ8rq3EeqqH_m5Zy8E_Q" origin="_ItUJ8Lq3EeqqH_m5Zy8E_Q" image="_ItUJ8bq3EeqqH_m5Zy8E_Q"/>
+  </units>
+</henshin:Module>

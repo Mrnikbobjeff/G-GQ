@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_w5VsgLq4EeqqH_m5Zy8E_Q">
+  <imports href="../../GGQ.modeling/model/modeling.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_xLJ1QLq4EeqqH_m5Zy8E_Q" name="Delete Floating Edges">
+    <lhs xmi:id="_xLNfoLq4EeqqH_m5Zy8E_Q" name="Lhs">
+      <nodes xmi:id="_zdPMoLq4EeqqH_m5Zy8E_Q" incoming="_-GVSQLq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//Edge"/>
+      </nodes>
+      <nodes xmi:id="_788j4Lq4EeqqH_m5Zy8E_Q" outgoing="_-GVSQLq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//GraphQuery"/>
+      </nodes>
+      <edges xmi:id="_-GVSQLq4EeqqH_m5Zy8E_Q" source="_788j4Lq4EeqqH_m5Zy8E_Q" target="_zdPMoLq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//GraphQuery/containedEdges"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_3TGD4Lq4EeqqH_m5Zy8E_Q">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_3TGD4bq4EeqqH_m5Zy8E_Q">
+          <conclusion xmi:id="_3TGD4rq4EeqqH_m5Zy8E_Q">
+            <nodes xmi:id="_3TGD47q4EeqqH_m5Zy8E_Q" outgoing="_4WpLkLq4EeqqH_m5Zy8E_Q _4r1YcLq4EeqqH_m5Zy8E_Q">
+              <type href="../../GGQ.modeling/model/modeling.ecore#//Edge"/>
+            </nodes>
+            <nodes xmi:id="_0u0wULq4EeqqH_m5Zy8E_Q" incoming="_4WpLkLq4EeqqH_m5Zy8E_Q">
+              <type href="../../GGQ.modeling/model/modeling.ecore#//Vertex"/>
+            </nodes>
+            <nodes xmi:id="_0-Ab0Lq4EeqqH_m5Zy8E_Q" incoming="_4r1YcLq4EeqqH_m5Zy8E_Q">
+              <type href="../../GGQ.modeling/model/modeling.ecore#//Vertex"/>
+            </nodes>
+            <edges xmi:id="_4WpLkLq4EeqqH_m5Zy8E_Q" source="_3TGD47q4EeqqH_m5Zy8E_Q" target="_0u0wULq4EeqqH_m5Zy8E_Q">
+              <type href="../../GGQ.modeling/model/modeling.ecore#//Edge/source"/>
+            </edges>
+            <edges xmi:id="_4r1YcLq4EeqqH_m5Zy8E_Q" source="_3TGD47q4EeqqH_m5Zy8E_Q" target="_0-Ab0Lq4EeqqH_m5Zy8E_Q">
+              <type href="../../GGQ.modeling/model/modeling.ecore#//Edge/target"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_3TGD5Lq4EeqqH_m5Zy8E_Q" origin="_zdPMoLq4EeqqH_m5Zy8E_Q" image="_3TGD47q4EeqqH_m5Zy8E_Q"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_xLNfobq4EeqqH_m5Zy8E_Q" name="Rhs">
+      <nodes xmi:id="_9cENQLq4EeqqH_m5Zy8E_Q">
+        <type href="../../GGQ.modeling/model/modeling.ecore#//GraphQuery"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_9cENQbq4EeqqH_m5Zy8E_Q" origin="_788j4Lq4EeqqH_m5Zy8E_Q" image="_9cENQLq4EeqqH_m5Zy8E_Q"/>
+  </units>
+</henshin:Module>

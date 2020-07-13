@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//rules/delete_floating_edges.henshin=UTF-8
+encoding//rules/delete_floating_edges.henshin_diagram=UTF-8
+encoding//rules/delete_redundant_edges.henshin=UTF-8
+encoding//rules/delete_redundant_edges.henshin_diagram=UTF-8
+encoding//rules/resolve_ambiguous_ids.henshin=UTF-8
+encoding//rules/resolve_ambiguous_ids.henshin_diagram=UTF-8
