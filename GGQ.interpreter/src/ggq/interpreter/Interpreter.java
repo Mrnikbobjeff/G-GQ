@@ -5,10 +5,8 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -22,8 +20,18 @@ public class Interpreter {
 		return collection.stream().filter(obj -> obj != without).collect(Collectors.toList());
 	}
 	
+	static private <K, V> Map<K, V> union(Map<K, V> map, K key, V value) {
+		Map<K, V> copy = new HashMap<>(map);
+		copy.put(key,  value);
+		return copy;
+	}
+	
 	static private <T> List<T> tail(List<T> list) {
 		return list.subList(1, list.size());
+	}
+	
+	static private <T> T head(List<T> list) {
+		return list.get(0);
 	}
 	
 	static private <T> Collection<T> collectIterator(Iterator<T> it) {
@@ -41,31 +49,7 @@ public class Interpreter {
 		return acceptableTypes.contains(object.eClass());
 	}
 	
-	static private Stream<Map<Vertex, EObject>> generatePossibleMappings(Collection<EObject> host, List<Vertex> vertices) {
-		if (vertices.isEmpty()) {
-			Map<Vertex, EObject> emptyMapping = new HashMap<>(); 
-			return Stream.of(emptyMapping);
-		}
-		
-		Vertex node = vertices.get(0);
-		return host.stream().flatMap(eobject -> {
-			boolean eobjectMatchesType = isInstanceOfClass(eobject, node.getType()); 
-			if (!eobjectMatchesType) {
-				Stream<Map<Vertex, EObject>> noValidMappings = Stream.empty();
-				return noValidMappings;
-			}
-			
-			Collection<EObject> hostWithoutThisEObject = without(host, eobject);
-			
-			Stream<Map<Vertex, EObject>> mappingsForRestOfQuery = generatePossibleMappings(hostWithoutThisEObject, tail(vertices));
-			return mappingsForRestOfQuery.map(mapping -> {
-				mapping.put(node, eobject); // mutation only happens bottom-up, so this is okay 
-				return mapping;
-			});
-		});
-	}
-	
-	static private List<EObject> getReferenceTargets(EObject source, EReference reference) {
+	static private List<EObject> getReferencedTargets(EObject source, EReference reference) {
 		if (!reference.isMany()) {
 			EObject target = (EObject) source.eGet(reference);
 			if (target == null) {
@@ -78,26 +62,64 @@ public class Interpreter {
 		return (List<EObject>) source.eGet(reference);		
 	}
 	
-	static private boolean isEdgeInMapping(Map<Vertex, EObject> mapping, Edge edge) {
-		Vertex source = edge.getSource();
-		Vertex target = edge.getTarget();
-		EReference type = edge.getType();
+	static private Stream<Map<Vertex, EObject>> generateMappings(Collection<EObject> host, List<Vertex> query, Map<Vertex, Collection<Edge>> edges) {
+		if (query.isEmpty()) { 
+			return Stream.of(Collections.emptyMap());
+		}
 		
-		EObject mappedSource = mapping.get(source);
-		EObject mappedTarget = mapping.get(target);
-		
-		List<EObject> referencedTargets = getReferenceTargets(mappedSource, type);
-		boolean thereIsAMatchingRefInHostGraph = referencedTargets.contains(mappedTarget);
-		
-		return thereIsAMatchingRefInHostGraph;
+		Vertex queryVertex = head(query);
+		return host.stream().flatMap(hostVertex -> {
+			if (!isInstanceOfClass(hostVertex, queryVertex.getType())) {
+				return Stream.empty();
+			}
+			
+			Stream<Map<Vertex, EObject>> otherPossibleMappings = generateMappings(without(host, hostVertex), tail(query), edges);
+			return otherPossibleMappings.flatMap(mapping -> {
+				Map<Vertex, EObject> extendedMapping = union(mapping, queryVertex, hostVertex);
+				
+				Collection<Edge> edgesConcernedByThisMapping = edges.get(queryVertex);
+				boolean someEdgeHasBeenMadeImpossible = edgesConcernedByThisMapping.stream().anyMatch(edge -> {
+					EObject mappedSource = extendedMapping.get(edge.getSource());
+					EObject mappedTarget = extendedMapping.get(edge.getTarget());
+					
+					boolean edgeIsFullyMapped = mappedSource != null && mappedTarget != null;
+					if (!edgeIsFullyMapped) {
+						return false;
+					}
+					
+					boolean edgeExistsInHost = getReferencedTargets(mappedSource, edge.getType()).contains(mappedTarget);
+					boolean edgeHasBeenMadeImpossible = !edgeExistsInHost;
+					return edgeHasBeenMadeImpossible;
+				});
+				
+				if (someEdgeHasBeenMadeImpossible) {
+					return Stream.empty();
+				} else {
+					return Stream.of(extendedMapping);
+				}
+			});
+			
+		});
 	}
 	
-	static private boolean isMappingAMatch(Map<Vertex, EObject> mapping, Collection<Edge> queryEdges) {
-		return queryEdges.stream().allMatch(edge-> isEdgeInMapping(mapping, edge));
+	static Map<Vertex, Collection<Edge>> collectConcernedEdgesByVertex(Collection<Edge> edges) {
+		Map<Vertex, Collection<Edge>> result = new HashMap<>();
+		for (Edge edge : edges) {
+			result.putIfAbsent(edge.getSource(), new ArrayList<>());
+			Collection<Edge> list = result.get(edge.getSource());
+			list.add(edge);
+			
+			result.putIfAbsent(edge.getTarget(), new ArrayList<>());
+			Collection<Edge> listTarget = result.get(edge.getTarget());
+			listTarget.add(edge);
+		}
+		return result;
 	}
+	
+	
 	
 	static Stream<Map<Vertex, EObject>> match(Collection<EObject> host, GraphQuery query) {
-		return generatePossibleMappings(host, query.getContainedVertices()).filter(mapping -> isMappingAMatch(mapping, query.getContainedEdges()));
+		return generateMappings(host, query.getContainedVertices(), collectConcernedEdgesByVertex(query.getContainedEdges())); // .filter(mapping -> isMappingAMatch(mapping, query.getContainedEdges()));
 	}
 	
 	static Stream<Map<Vertex, EObject>> match(EObject host, GraphQuery query) {
