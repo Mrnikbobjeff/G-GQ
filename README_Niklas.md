@@ -2,4 +2,4 @@
 
 ## Aufgabe 1
 ![gql](gqlcd.png)
-[![Watch the video](gqlcd.png)](https://youtu.be/eNK9JLzmcOY)
+[![Watch the video](https://img.youtube.com/vi/eNK9JLzmcOY/maxresdefault.jpg)](https://youtu.be/eNK9JLzmcOY)
