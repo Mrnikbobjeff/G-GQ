@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: de.mdelab.mltgg.x2y
+Bundle-SymbolicName: de.mdelab.mltgg.x2y;singleton:=true
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil
+ ity:=reexport,de.mdelab.mltgg.mote2;visibility:=reexport,de.mdelab.ml
+ core;visibility:=reexport,de.mdelab.mltgg.mote2.sdm;visibility:=reexp
+ ort,de.mdelab.mlsdm;visibility:=reexport,de.mdelab.mlexpressions;visi
+ bility:=reexport,de.mdelab.mlstorypatterns;visibility:=reexport, de.m
+ delab.mlsdm.interpreter.eclipse;bundle-version="1.0.0";visibility:=re
+ export
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Export-Package: de.mdelab.mltgg.x2y,de.mdelab.mltgg.x2y.generated,de.m
+ delab.mltgg.x2y.generated.impl,de.mdelab.mltgg.x2y.generated.util,de.
+ mdelab.mltgg.x2y.impl,de.mdelab.mltgg.x2y.util
+Bundle-Name: %pluginName
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+

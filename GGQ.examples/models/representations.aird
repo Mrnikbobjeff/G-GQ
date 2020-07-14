@@ -1,13 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description" uid="_uQFQUMEQEeqTL8k1SseAsw" selectedViews="_sMH_EMEREeq2mofwSOLahA" version="14.3.0.201909031200">
-  <semanticResources>floating_edges.gql</semanticResources>
-  <semanticResources>redundant_edges.gql</semanticResources>
-  <semanticResources>ambiguous_ids.gql</semanticResources>
-  <semanticResources>platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign</semanticResources>
-  <semanticResources>environment:/viewpoint</semanticResources>
-  <semanticResources>platform:/resource/GGQ.modeling/model/modeling.genmodel</semanticResources>
-  <semanticResources>platform:/resource/GGQ.modeling/model/modeling.ecore</semanticResources>
-  <ownedViews xmi:type="viewpoint:DView" uid="_sMH_EMEREeq2mofwSOLahA">
-    <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-  </ownedViews>
-</viewpoint:DAnalysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:modeling="http://www.example.org/modeling" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_uQFQUMEQEeqTL8k1SseAsw" selectedViews="_sMH_EMEREeq2mofwSOLahA _z7BDoMUSEeqRN56owq2loA" version="14.3.0.201909031200">
+    <semanticResources>floating_edges.gql</semanticResources>
+    <semanticResources>redundant_edges.gql</semanticResources>
+    <semanticResources>ambiguous_ids.gql</semanticResources>
+    <semanticResources>platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign</semanticResources>
+    <semanticResources>environment:/viewpoint</semanticResources>
+    <semanticResources>platform:/resource/GGQ.modeling/model/modeling.genmodel</semanticResources>
+    <semanticResources>platform:/resource/GGQ.modeling/model/modeling.ecore</semanticResources>
+    <semanticResources>sample.gql</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_sMH_EMEREeq2mofwSOLahA">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_z7BDoMUSEeqRN56owq2loA">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/GGQ.design/description/GGQ.odesign#//@ownedViewpoints[name='GQL%20Viewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_12eqwMUSEeqRN56owq2loA" name="Sample gql diagram" repPath="#_12SdgMUSEeqRN56owq2loA" changeId="2442ff76-ffea-4ae1-9b52-66afdf057f85">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/GGQ.design/description/GGQ.odesign#//@ownedViewpoints[name='GQL%20Viewpoint']/@ownedRepresentations[name='Gql%20Diagram']"/>
+        <target xmi:type="modeling:GraphQuery" href="sample.gql#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_12SdgMUSEeqRN56owq2loA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_12bAYMUSEeqRN56owq2loA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_12bAYcUSEeqRN56owq2loA"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_12lYcMUSEeqRN56owq2loA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_12lYccUSEeqRN56owq2loA" type="Sirius" element="_12SdgMUSEeqRN56owq2loA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_5L_OAMUSEeqRN56owq2loA" type="2002" element="_5L3SMMUSEeqRN56owq2loA">
+          <children xmi:type="notation:Node" xmi:id="_5MCRUMUSEeqRN56owq2loA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_5MCRUcUSEeqRN56owq2loA" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_5MCRUsUSEeqRN56owq2loA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_5MCRU8USEeqRN56owq2loA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_5L_OAcUSEeqRN56owq2loA" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5L_OAsUSEeqRN56owq2loA" x="120" y="84" width="133" height="121"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_5_r70MUSEeqRN56owq2loA" type="2002" element="_5_o4gMUSEeqRN56owq2loA">
+          <children xmi:type="notation:Node" xmi:id="_5_r708USEeqRN56owq2loA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_5_r71MUSEeqRN56owq2loA" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_5_r71cUSEeqRN56owq2loA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_5_r71sUSEeqRN56owq2loA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_5_r70cUSEeqRN56owq2loA" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5_r70sUSEeqRN56owq2loA" x="492" y="72" width="181" height="131"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_12lYcsUSEeqRN56owq2loA"/>
+        <edges xmi:type="notation:Edge" xmi:id="_9YzzwMUSEeqRN56owq2loA" type="4001" element="_9YttIMUSEeqRN56owq2loA" source="_5L_OAMUSEeqRN56owq2loA" target="_5_r70MUSEeqRN56owq2loA">
+          <children xmi:type="notation:Node" xmi:id="_9Y1B4MUSEeqRN56owq2loA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9Y1B4cUSEeqRN56owq2loA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9Y1B4sUSEeqRN56owq2loA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9Y1B48USEeqRN56owq2loA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9Y1o8MUSEeqRN56owq2loA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9Y1o8cUSEeqRN56owq2loA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_9YzzwcUSEeqRN56owq2loA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9YzzwsUSEeqRN56owq2loA" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9Yzzw8USEeqRN56owq2loA" points="[0, 0, -241, 0]$[241, 0, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9Y23EMUSEeqRN56owq2loA" id="(1.0,0.7815126050420168)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9Y23EcUSEeqRN56owq2loA" id="(0.0,0.813953488372093)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-T14oMUSEeqRN56owq2loA" type="4001" element="_-TxnNMUSEeqRN56owq2loA" source="_5_r70MUSEeqRN56owq2loA" target="_5L_OAMUSEeqRN56owq2loA">
+          <children xmi:type="notation:Node" xmi:id="_-T14pMUSEeqRN56owq2loA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-T14pcUSEeqRN56owq2loA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-T14psUSEeqRN56owq2loA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-T14p8USEeqRN56owq2loA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-T14qMUSEeqRN56owq2loA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-T14qcUSEeqRN56owq2loA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-T14ocUSEeqRN56owq2loA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-T14osUSEeqRN56owq2loA" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-T14o8USEeqRN56owq2loA" points="[0, 0, 241, 0]$[-241, 0, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-T14qsUSEeqRN56owq2loA" id="(0.0,0.5503875968992248)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-T14q8USEeqRN56owq2loA" id="(1.0,0.4957983193277311)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_5L3SMMUSEeqRN56owq2loA" name="123" outgoingEdges="_9YttIMUSEeqRN56owq2loA" incomingEdges="_-TxnNMUSEeqRN56owq2loA">
+      <target xmi:type="modeling:Vertex" href="sample.gql#123"/>
+      <semanticElements xmi:type="modeling:Vertex" href="sample.gql#123"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_5L35QMUSEeqRN56owq2loA" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/GGQ.design/description/GGQ.odesign#//@ownedViewpoints[name='GQL%20Viewpoint']/@ownedRepresentations[name='Gql%20Diagram']/@defaultLayer/@containerMappings[name='Vertex%20Container']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/GGQ.design/description/GGQ.odesign#//@ownedViewpoints[name='GQL%20Viewpoint']/@ownedRepresentations[name='Gql%20Diagram']/@defaultLayer/@containerMappings[name='Vertex%20Container']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_5_o4gMUSEeqRN56owq2loA" name="abc" outgoingEdges="_-TxnNMUSEeqRN56owq2loA" incomingEdges="_9YttIMUSEeqRN56owq2loA">
+      <target xmi:type="modeling:Vertex" href="sample.gql#abc"/>
+      <semanticElements xmi:type="modeling:Vertex" href="sample.gql#abc"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_5_o4gcUSEeqRN56owq2loA" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/GGQ.design/description/GGQ.odesign#//@ownedViewpoints[name='GQL%20Viewpoint']/@ownedRepresentations[name='Gql%20Diagram']/@defaultLayer/@containerMappings[name='Vertex%20Container']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/GGQ.design/description/GGQ.odesign#//@ownedViewpoints[name='GQL%20Viewpoint']/@ownedRepresentations[name='Gql%20Diagram']/@defaultLayer/@containerMappings[name='Vertex%20Container']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9YttIMUSEeqRN56owq2loA" sourceNode="_5L3SMMUSEeqRN56owq2loA" targetNode="_5_o4gMUSEeqRN56owq2loA">
+      <target xmi:type="modeling:Edge" href="sample.gql#//@containedEdges.0"/>
+      <semanticElements xmi:type="modeling:Edge" href="sample.gql#//@containedEdges.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_9YuUMMUSEeqRN56owq2loA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/GGQ.design/description/GGQ.odesign#//@ownedViewpoints[name='GQL%20Viewpoint']/@ownedRepresentations[name='Gql%20Diagram']/@defaultLayer/@edgeMappings[name='Edge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_9YuUMcUSEeqRN56owq2loA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/GGQ.design/description/GGQ.odesign#//@ownedViewpoints[name='GQL%20Viewpoint']/@ownedRepresentations[name='Gql%20Diagram']/@defaultLayer/@edgeMappings[name='Edge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_-TxnNMUSEeqRN56owq2loA" sourceNode="_5_o4gMUSEeqRN56owq2loA" targetNode="_5L3SMMUSEeqRN56owq2loA">
+      <target xmi:type="modeling:Edge" href="sample.gql#//@containedEdges.1"/>
+      <semanticElements xmi:type="modeling:Edge" href="sample.gql#//@containedEdges.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_-TyOQMUSEeqRN56owq2loA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/GGQ.design/description/GGQ.odesign#//@ownedViewpoints[name='GQL%20Viewpoint']/@ownedRepresentations[name='Gql%20Diagram']/@defaultLayer/@edgeMappings[name='Edge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_-TyOQcUSEeqRN56owq2loA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/GGQ.design/description/GGQ.odesign#//@ownedViewpoints[name='GQL%20Viewpoint']/@ownedRepresentations[name='Gql%20Diagram']/@defaultLayer/@edgeMappings[name='Edge']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/GGQ.design/description/GGQ.odesign#//@ownedViewpoints[name='GQL%20Viewpoint']/@ownedRepresentations[name='Gql%20Diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_12TEkMUSEeqRN56owq2loA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/GGQ.design/description/GGQ.odesign#//@ownedViewpoints[name='GQL%20Viewpoint']/@ownedRepresentations[name='Gql%20Diagram']/@defaultLayer"/>
+    <target xmi:type="modeling:GraphQuery" href="sample.gql#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

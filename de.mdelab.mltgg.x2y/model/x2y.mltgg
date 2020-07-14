@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mltgg:TGG xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mlexpressions="http://www.mdelab.de/mlexpressions/1.0" xmlns:mltgg="http://www.mdelab.de/mltgg/1.0" uuid="_An6LwD8fEeKTTbcgLXf6Gw" name="x2y" tggID="x2y">
+  <ruleGroups uuid="_BBH9AD8fEeKTTbcgLXf6Gw" name="x2yAxiom" ruleGroupID="x2yAxiom" isAxiom="true">
+    <rules uuid="_EWn5MT8fEeKTTbcgLXf6Gw" name="r1" leftInputElements="_HmOBsT8fEeKTTbcgLXf6Gw" rightInputElements="_WyPf8T8fEeKTTbcgLXf6Gw" ruleID="r1">
+      <leftModelDomain uuid="_F4J9YT8fEeKTTbcgLXf6Gw">
+        <modelObjects uuid="_HmOBsT8fEeKTTbcgLXf6Gw" modifier="CREATE" name="graphQuery" outgoingLinks="_MIEYIMUAEeqRN56owq2loA _MoZeAMUAEeqRN56owq2loA">
+          <type xsi:type="ecore:EClass" href="http://www.example.org/modeling#//GraphQuery"/>
+        </modelObjects>
+        <modelObjects uuid="_OQB_ocT_EeqRN56owq2loA" modifier="CREATE" incomingCorrespondenceLink="_sGIH0MUOEeqRN56owq2loA" name="vertex" incomingLinks="_MIEYIMUAEeqRN56owq2loA">
+          <type xsi:type="ecore:EClass" href="http://www.example.org/modeling#//Vertex"/>
+          <attributeAssignments uuid="_k0hDwMUAEeqRN56owq2loA">
+            <assignmentExpression xsi:type="mlexpressions:MLStringExpression" uuid="_Sx6dIcUEEeqRN56owq2loA" expressionString="elementId" expressionLanguageID="OCL"/>
+            <feature xsi:type="ecore:EAttribute" href="http://www.example.org/modeling#//Vertex/id"/>
+          </attributeAssignments>
+          <attributeAssignments uuid="_lp4osMUEEeqRN56owq2loA">
+            <assignmentExpression xsi:type="mlexpressions:MLStringExpression" uuid="_OGaTIcULEeqRN56owq2loA" expressionString="elementClass" expressionLanguageID="OCL"/>
+            <feature xsi:type="ecore:EReference" href="http://www.example.org/modeling#//Vertex/type"/>
+          </attributeAssignments>
+        </modelObjects>
+        <modelObjects uuid="_OQB_ocT_EeqRN56owq2loA" modifier="CREATE" incomingCorrespondenceLink="_frG8IMUPEeqRN56owq2loA" name="edge" incomingLinks="_MoZeAMUAEeqRN56owq2loA">
+          <type xsi:type="ecore:EClass" href="http://www.example.org/modeling#//Edge"/>
+          <attributeAssignments uuid="_nfSrIMUEEeqRN56owq2loA">
+            <assignmentExpression xsi:type="mlexpressions:MLStringExpression" uuid="_DoSAAMUOEeqRN56owq2loA" expressionString="elementReference&#xD;&#xA;" expressionLanguageID="OCL"/>
+            <feature xsi:type="ecore:EReference" href="http://www.example.org/modeling#//Edge/type"/>
+          </attributeAssignments>
+        </modelObjects>
+        <modelLinks uuid="_MIEYIMUAEeqRN56owq2loA" modifier="CREATE" source="_HmOBsT8fEeKTTbcgLXf6Gw" target="_OQB_ocT_EeqRN56owq2loA">
+          <feature xsi:type="ecore:EReference" href="http://www.example.org/modeling#//GraphQuery/containedVertices"/>
+        </modelLinks>
+        <modelLinks uuid="_MoZeAMUAEeqRN56owq2loA" modifier="CREATE" source="_HmOBsT8fEeKTTbcgLXf6Gw" target="_OQB_ocT_EeqRN56owq2loA">
+          <feature xsi:type="ecore:EReference" href="http://www.example.org/modeling#//GraphQuery/containedEdges"/>
+        </modelLinks>
+      </leftModelDomain>
+      <rightModelDomain uuid="_GUAy8j8fEeKTTbcgLXf6Gw">
+        <modelObjects uuid="_WyPf8T8fEeKTTbcgLXf6Gw" modifier="CREATE" incomingCorrespondenceLink="_bI1Fsj8fEeKTTbcgLXf6Gw" name="rule" outgoingLinks="_4FlVsMUJEeqRN56owq2loA _YAE8YMUKEeqRN56owq2loA _8vSPQMUKEeqRN56owq2loA _0O5tIMULEeqRN56owq2loA">
+          <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2011/Henshin#//Rule"/>
+          <attributeAssignments uuid="_8B0CEMUGEeqRN56owq2loA"/>
+        </modelObjects>
+        <modelObjects uuid="_wwUHYMUAEeqRN56owq2loA" modifier="CREATE" incomingCorrespondenceLink="_eH9uYMUPEeqRN56owq2loA" name="hEdge" incomingLinks="_ua7mkMUPEeqRN56owq2loA _um93cMUPEeqRN56owq2loA">
+          <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2011/Henshin#//Edge"/>
+          <attributeAssignments uuid="_-vXJQMUNEeqRN56owq2loA">
+            <assignmentExpression xsi:type="mlexpressions:MLStringExpression" uuid="_AqbHwMUOEeqRN56owq2loA" expressionString="elementReference&#xD;&#xA;" expressionLanguageID="OCL"/>
+            <feature xsi:type="ecore:EReference" href="http://www.eclipse.org/emf/2011/Henshin#//Edge/type"/>
+          </attributeAssignments>
+        </modelObjects>
+        <modelObjects uuid="_3fqpYMUCEeqRN56owq2loA" modifier="CREATE" incomingCorrespondenceLink="_5VoPAMUOEeqRN56owq2loA" name="hVertex" outgoingLinks="_ua7mkMUPEeqRN56owq2loA _um93cMUPEeqRN56owq2loA" incomingLinks="_C6E9kMULEeqRN56owq2loA _NvumkMUNEeqRN56owq2loA">
+          <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2011/Henshin#//Node"/>
+          <attributeAssignments uuid="_ADH4MMUDEeqRN56owq2loA">
+            <assignmentExpression xsi:type="mlexpressions:MLStringExpression" uuid="_IpUcgcUEEeqRN56owq2loA" expressionString="elementId" expressionLanguageID="OCL"/>
+            <feature xsi:type="ecore:EAttribute" href="http://www.eclipse.org/emf/2011/Henshin#//NamedElement/name"/>
+          </attributeAssignments>
+          <attributeAssignments uuid="_adFU4MULEeqRN56owq2loA">
+            <assignmentExpression xsi:type="mlexpressions:MLStringExpression" uuid="_g893gMUNEeqRN56owq2loA" expressionString="elementClass&#xD;&#xA;" expressionLanguageID="OCL"/>
+            <feature xsi:type="ecore:EReference" href="http://www.eclipse.org/emf/2011/Henshin#//Node/type"/>
+          </attributeAssignments>
+        </modelObjects>
+        <modelObjects uuid="_275w0MUJEeqRN56owq2loA" modifier="CREATE" incomingCorrespondenceLink="_z9a0MMUOEeqRN56owq2loA" name="lhg" outgoingLinks="_C6E9kMULEeqRN56owq2loA" incomingLinks="_4FlVsMUJEeqRN56owq2loA">
+          <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2011/Henshin#//Graph"/>
+        </modelObjects>
+        <modelObjects uuid="_Hdgh8MUKEeqRN56owq2loA" modifier="CREATE" incomingCorrespondenceLink="_52UhQMUOEeqRN56owq2loA" name="rhg" outgoingLinks="_Ab6nIMUNEeqRN56owq2loA" incomingLinks="_YAE8YMUKEeqRN56owq2loA">
+          <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2011/Henshin#//Graph"/>
+        </modelObjects>
+        <modelObjects uuid="_61L6EMUKEeqRN56owq2loA" modifier="CREATE" incomingCorrespondenceLink="_6Szo8MUOEeqRN56owq2loA" outgoingLinks="_MYj_UMUNEeqRN56owq2loA _NvumkMUNEeqRN56owq2loA" incomingLinks="_8vSPQMUKEeqRN56owq2loA">
+          <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2011/Henshin#//Mapping"/>
+        </modelObjects>
+        <modelObjects uuid="_xZSx8MULEeqRN56owq2loA" modifier="CREATE" incomingCorrespondenceLink="_8WKAwMUOEeqRN56owq2loA" incomingLinks="_0O5tIMULEeqRN56owq2loA">
+          <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2011/Henshin#//Mapping"/>
+        </modelObjects>
+        <modelObjects uuid="_xb8n4MUMEeqRN56owq2loA" modifier="CREATE" incomingCorrespondenceLink="_-zzH4MUOEeqRN56owq2loA" name="rhVertex" outgoingLinks="_lnvSoMUPEeqRN56owq2loA _nGnEYMUPEeqRN56owq2loA" incomingLinks="_Ab6nIMUNEeqRN56owq2loA _MYj_UMUNEeqRN56owq2loA">
+          <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2011/Henshin#//Node"/>
+        </modelObjects>
+        <modelObjects uuid="_6W4ikMUMEeqRN56owq2loA" modifier="CREATE" incomingCorrespondenceLink="_efZW8MUPEeqRN56owq2loA" name="rhEdge" incomingLinks="_lnvSoMUPEeqRN56owq2loA _nGnEYMUPEeqRN56owq2loA">
+          <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2011/Henshin#//Edge"/>
+        </modelObjects>
+        <modelLinks uuid="_4FlVsMUJEeqRN56owq2loA" modifier="CREATE" source="_WyPf8T8fEeKTTbcgLXf6Gw" target="_275w0MUJEeqRN56owq2loA">
+          <feature xsi:type="ecore:EReference" href="http://www.eclipse.org/emf/2011/Henshin#//Rule/lhs"/>
+        </modelLinks>
+        <modelLinks uuid="_YAE8YMUKEeqRN56owq2loA" modifier="CREATE" source="_WyPf8T8fEeKTTbcgLXf6Gw" target="_Hdgh8MUKEeqRN56owq2loA">
+          <feature xsi:type="ecore:EReference" href="http://www.eclipse.org/emf/2011/Henshin#//Rule/rhs"/>
+        </modelLinks>
+        <modelLinks uuid="_8vSPQMUKEeqRN56owq2loA" modifier="CREATE" source="_WyPf8T8fEeKTTbcgLXf6Gw" target="_61L6EMUKEeqRN56owq2loA">
+          <feature xsi:type="ecore:EReference" href="http://www.eclipse.org/emf/2011/Henshin#//Rule/mappings"/>
+        </modelLinks>
+        <modelLinks uuid="_C6E9kMULEeqRN56owq2loA" modifier="CREATE" source="_275w0MUJEeqRN56owq2loA" target="_3fqpYMUCEeqRN56owq2loA">
+          <feature xsi:type="ecore:EReference" href="http://www.eclipse.org/emf/2011/Henshin#//Graph/nodes"/>
+        </modelLinks>
+        <modelLinks uuid="_0O5tIMULEeqRN56owq2loA" modifier="CREATE" source="_WyPf8T8fEeKTTbcgLXf6Gw" target="_xZSx8MULEeqRN56owq2loA">
+          <feature xsi:type="ecore:EReference" href="http://www.eclipse.org/emf/2011/Henshin#//Rule/mappings"/>
+        </modelLinks>
+        <modelLinks uuid="_Ab6nIMUNEeqRN56owq2loA" modifier="CREATE" source="_Hdgh8MUKEeqRN56owq2loA" target="_xb8n4MUMEeqRN56owq2loA">
+          <feature xsi:type="ecore:EReference" href="http://www.eclipse.org/emf/2011/Henshin#//Graph/nodes"/>
+        </modelLinks>
+        <modelLinks uuid="_MYj_UMUNEeqRN56owq2loA" modifier="CREATE" source="_61L6EMUKEeqRN56owq2loA" target="_xb8n4MUMEeqRN56owq2loA">
+          <feature xsi:type="ecore:EReference" href="http://www.eclipse.org/emf/2011/Henshin#//Mapping/image"/>
+        </modelLinks>
+        <modelLinks uuid="_NvumkMUNEeqRN56owq2loA" modifier="CREATE" source="_61L6EMUKEeqRN56owq2loA" target="_3fqpYMUCEeqRN56owq2loA">
+          <feature xsi:type="ecore:EReference" href="http://www.eclipse.org/emf/2011/Henshin#//Mapping/origin"/>
+        </modelLinks>
+        <modelLinks uuid="_lnvSoMUPEeqRN56owq2loA" modifier="CREATE" source="_xb8n4MUMEeqRN56owq2loA" target="_6W4ikMUMEeqRN56owq2loA">
+          <feature xsi:type="ecore:EReference" href="http://www.eclipse.org/emf/2011/Henshin#//Node/incoming"/>
+        </modelLinks>
+        <modelLinks uuid="_nGnEYMUPEeqRN56owq2loA" modifier="CREATE" source="_xb8n4MUMEeqRN56owq2loA" target="_6W4ikMUMEeqRN56owq2loA">
+          <feature xsi:type="ecore:EReference" href="http://www.eclipse.org/emf/2011/Henshin#//Node/outgoing"/>
+        </modelLinks>
+        <modelLinks uuid="_ua7mkMUPEeqRN56owq2loA" modifier="CREATE" source="_3fqpYMUCEeqRN56owq2loA" target="_wwUHYMUAEeqRN56owq2loA">
+          <feature xsi:type="ecore:EReference" href="http://www.eclipse.org/emf/2011/Henshin#//Node/incoming"/>
+        </modelLinks>
+        <modelLinks uuid="_um93cMUPEeqRN56owq2loA" modifier="CREATE" source="_3fqpYMUCEeqRN56owq2loA" target="_wwUHYMUAEeqRN56owq2loA">
+          <feature xsi:type="ecore:EReference" href="http://www.eclipse.org/emf/2011/Henshin#//Node/outgoing"/>
+        </modelLinks>
+      </rightModelDomain>
+      <correspondenceDomain uuid="_GqCGQz8fEeKTTbcgLXf6Gw">
+        <correspondenceNodes uuid="_YbWLwT8fEeKTTbcgLXf6Gw" modifier="CREATE" name="corrAxiom" outgoingLinks="_Z6WgYj8fEeKTTbcgLXf6Gw _bI1Fsj8fEeKTTbcgLXf6Gw">
+          <type xsi:type="ecore:EClass" href="x2y.ecore#//CorrAxiom"/>
+        </correspondenceNodes>
+        <correspondenceNodes uuid="_tk5skMUGEeqRN56owq2loA" modifier="CREATE" name="vertexRule" outgoingLinks="_sGIH0MUOEeqRN56owq2loA _z9a0MMUOEeqRN56owq2loA _5VoPAMUOEeqRN56owq2loA _52UhQMUOEeqRN56owq2loA _6Szo8MUOEeqRN56owq2loA _8WKAwMUOEeqRN56owq2loA _-zzH4MUOEeqRN56owq2loA">
+          <type xsi:type="ecore:EClass" href="x2y.ecore#//CorrRule"/>
+        </correspondenceNodes>
+        <correspondenceNodes uuid="_BD7-gMUPEeqRN56owq2loA" modifier="CREATE" name="edgeRule" outgoingLinks="_eH9uYMUPEeqRN56owq2loA _efZW8MUPEeqRN56owq2loA _frG8IMUPEeqRN56owq2loA">
+          <type xsi:type="ecore:EClass" href="x2y.ecore#//CorrRule"/>
+        </correspondenceNodes>
+        <correspondenceLinks uuid="_Z6WgYj8fEeKTTbcgLXf6Gw" modifier="CREATE" source="_YbWLwT8fEeKTTbcgLXf6Gw"/>
+        <correspondenceLinks uuid="_bI1Fsj8fEeKTTbcgLXf6Gw" modifier="CREATE" source="_YbWLwT8fEeKTTbcgLXf6Gw" target="_WyPf8T8fEeKTTbcgLXf6Gw"/>
+        <correspondenceLinks uuid="_sGIH0MUOEeqRN56owq2loA" source="_tk5skMUGEeqRN56owq2loA" target="_OQB_ocT_EeqRN56owq2loA"/>
+        <correspondenceLinks uuid="_z9a0MMUOEeqRN56owq2loA" source="_tk5skMUGEeqRN56owq2loA" target="_275w0MUJEeqRN56owq2loA"/>
+        <correspondenceLinks uuid="_5VoPAMUOEeqRN56owq2loA" source="_tk5skMUGEeqRN56owq2loA" target="_3fqpYMUCEeqRN56owq2loA"/>
+        <correspondenceLinks uuid="_52UhQMUOEeqRN56owq2loA" source="_tk5skMUGEeqRN56owq2loA" target="_Hdgh8MUKEeqRN56owq2loA"/>
+        <correspondenceLinks uuid="_6Szo8MUOEeqRN56owq2loA" source="_tk5skMUGEeqRN56owq2loA" target="_61L6EMUKEeqRN56owq2loA"/>
+        <correspondenceLinks uuid="_8WKAwMUOEeqRN56owq2loA" source="_tk5skMUGEeqRN56owq2loA" target="_xZSx8MULEeqRN56owq2loA"/>
+        <correspondenceLinks uuid="_-zzH4MUOEeqRN56owq2loA" source="_tk5skMUGEeqRN56owq2loA" target="_xb8n4MUMEeqRN56owq2loA"/>
+        <correspondenceLinks uuid="_eH9uYMUPEeqRN56owq2loA" source="_BD7-gMUPEeqRN56owq2loA" target="_wwUHYMUAEeqRN56owq2loA"/>
+        <correspondenceLinks uuid="_efZW8MUPEeqRN56owq2loA" source="_BD7-gMUPEeqRN56owq2loA" target="_6W4ikMUMEeqRN56owq2loA"/>
+        <correspondenceLinks uuid="_frG8IMUPEeqRN56owq2loA" source="_BD7-gMUPEeqRN56owq2loA" target="_OQB_ocT_EeqRN56owq2loA"/>
+      </correspondenceDomain>
+      <ruleParameters uuid="_AF6YYMUBEeqRN56owq2loA" name="elementId">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <forwardCalculationExpression xsi:type="mlexpressions:MLStringExpression" uuid="_SoYYkMUCEeqRN56owq2loA" expressionString="vertex.id" expressionLanguageID="OCL"/>
+        <backwardCalculationExpression xsi:type="mlexpressions:MLStringExpression" uuid="_CWEyQMUDEeqRN56owq2loA" expressionString="hVertex.name" expressionLanguageID="OCL"/>
+      </ruleParameters>
+      <ruleParameters uuid="_GkKpsMULEeqRN56owq2loA" name="elementClass">
+        <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
+        <forwardCalculationExpression xsi:type="mlexpressions:MLStringExpression" uuid="_KbW9sMULEeqRN56owq2loA" expressionString="vertex.type" expressionLanguageID="OCL"/>
+        <backwardCalculationExpression xsi:type="mlexpressions:MLStringExpression" uuid="_aI0qMMUNEeqRN56owq2loA" expressionString="hvertex.type" expressionLanguageID="OCL"/>
+      </ruleParameters>
+      <ruleParameters uuid="_VnAr4MUNEeqRN56owq2loA" name="elementReference">
+        <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
+        <forwardCalculationExpression xsi:type="mlexpressions:MLStringExpression" uuid="_p49iIMUNEeqRN56owq2loA" expressionString="edge.type" expressionLanguageID="OCL"/>
+        <backwardCalculationExpression xsi:type="mlexpressions:MLStringExpression" uuid="_u6gJYMUNEeqRN56owq2loA" expressionString="hEdge.type" expressionLanguageID="OCL"/>
+      </ruleParameters>
+    </rules>
+  </ruleGroups>
+</mltgg:TGG>

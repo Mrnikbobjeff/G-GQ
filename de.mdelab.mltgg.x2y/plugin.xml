@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.0"?><!--
+--><plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated x2y -->
+      <package class="de.mdelab.mltgg.x2y.X2yPackage" genModel="model-gen/model/x2y.genmodel" uri="http://www.mdelab.de/mltgg/x2y/1.0"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated x2y -->
+      <package class="de.mdelab.mltgg.x2y.generated.GeneratedPackage" genModel="model-gen/model/x2y.genmodel" uri="http://www.mdelab.de/mltgg/x2y/1.0/generated"/>
+   </extension>
+
+<extension point="de.mdelab.mltgg.mote2.eclipse.rules">
+<rules configurationFileURI="model-gen/config.xmi" tggID="x2y"/>
+</extension>
+</plugin>
