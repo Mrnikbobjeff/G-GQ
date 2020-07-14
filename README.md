@@ -30,6 +30,9 @@ Observations:
 
 ## 3. Interpreter
 
+We first implemented the naïve brute-force version propsed on the task sheet (see [cd1ea9ba](https://github.com/Mrnikbobjeff/G-GQ/commits/cd1ea9baaa6da81fdab6561bae629759cf680689)).
+We've then refined it by filtering invalid matchings as soon as they break one of the queried edges.
+
 Intuition: Given a `host` and a `query` graph, generate all type-matching mappings between the vertices of `host` and the vertices of `query`.
 Ensure queried edges are present in the `host` graph incrementally by checking once both sides are mapped.
 
@@ -83,4 +86,8 @@ generateMappings(
 TODO: Henshin Transformation
 
 ## Résumé
+
+We built a simple & naïve graph querying language.
+It features a graphical editor, refactoring rules, a simplistic interpreter and interoparability with Henshin Transformations.
+EMF allows to hide quite a lot of complexity under the hood, but is a rather hard-to-use tool itself.
 
