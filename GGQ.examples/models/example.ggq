@@ -1,4 +1,4 @@
-a(test)
-b(hallo)
+a : de.simonknott
+b : test
 
-a -> b : hello
+a -> b : hello.test

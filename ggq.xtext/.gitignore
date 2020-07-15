@@ -1,5 +1,5 @@
 /bin/
 src-gen
-src/ggq/
-!src/ggq/GGQ.xtext
-!src/ggq/GenerateGGQ.mwe2
+/src/ggq/
+!/src/ggq/GGQ.xtext
+!/src/ggq/GenerateGGQ.mwe2
