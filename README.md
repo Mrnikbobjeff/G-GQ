@@ -106,6 +106,26 @@ Expected outcome: All permutations of three out of four *Design Patterns* author
 
 GGQ -> Henshin
 
+## Bonus: Textual Syntax
+
+We've built a textual syntax using XText.
+The desired syntax looks something like this:
+
+```
+a1 : Author
+a2 : Author
+a3 : Author
+common_book : Book
+
+a1 -> common_book : authored
+a2 -> common_book : authored
+a3 -> common_book : authored
+```
+
+Apart from specifying types, it kind of works:
+
+![XText demo image](./assets/xtext_demo_img.png)
+
 ## Résumé
 
 We built a simple & naïve graph querying language.

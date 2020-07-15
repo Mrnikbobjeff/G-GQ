@@ -1,4 +1,8 @@
-a : de.simonknott
-b : test
+a1 : Author
+a2 : Author
+a3 : Author
+common_book : Book
 
-a -> b : hello.test
+a1 -> common_book : authored
+a2 -> common_book : authored
+a3 -> common_book : authored
