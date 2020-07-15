@@ -2,7 +2,12 @@
 
 ## 1.
 
-TODO: Metamodel & Sirius editor
+### Metamodell
+![gql](./assets/gqlcd.png)
+
+### Sirius Editor:
+
+[![Watch the video](https://img.youtube.com/vi/eNK9JLzmcOY/maxresdefault.jpg)](https://youtu.be/eNK9JLzmcOY)
 
 ## 2. Refactoring & Repair
 
@@ -99,7 +104,7 @@ Expected outcome: All permutations of three out of four *Design Patterns* author
 
 ## 4.
 
-TODO: Henshin Transformation
+GGQ -> Henshin
 
 ## Résumé
 
