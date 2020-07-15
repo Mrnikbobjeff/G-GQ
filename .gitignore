@@ -2,6 +2,7 @@
 /Eclipse.app/
 /GGQ.modeling.edit/
 /GGQ.modeling.editor/
+/GGQ.xtext.*/
 
 .classpath
 .project
