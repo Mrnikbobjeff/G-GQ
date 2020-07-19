@@ -62,9 +62,11 @@ public class Interpreter {
 		return (List<EObject>) source.eGet(reference);		
 	}
 	
-	static private Stream<Map<Vertex, EObject>> generateMappings(Collection<EObject> host, List<Vertex> query, Map<Vertex, Collection<Edge>> edges) {
+	public static int iterationCounter = 0;
+	
+	static private Stream<Map<Vertex, EObject>> generateMappings(Collection<EObject> host, List<Vertex> query, Map<Vertex, Collection<Edge>> edges, Map<Vertex, EObject> currentMapping) {
 		if (query.isEmpty()) { 
-			return Stream.of(Collections.emptyMap());
+			return Stream.of(currentMapping);
 		}
 		
 		Vertex queryVertex = head(query);
@@ -73,33 +75,34 @@ public class Interpreter {
 				return Stream.empty();
 			}
 			
-			Stream<Map<Vertex, EObject>> otherPossibleMappings = generateMappings(without(host, hostVertex), tail(query), edges);
-			return otherPossibleMappings.flatMap(mapping -> {
-				Map<Vertex, EObject> extendedMapping = union(mapping, queryVertex, hostVertex);
+			Map<Vertex, EObject> extendedMapping = union(currentMapping, queryVertex, hostVertex);
+			
+			
+			Collection<Edge> edgesConcernedByThisMapping = edges.get(queryVertex);
+			boolean someEdgeHasBeenMadeImpossible = edgesConcernedByThisMapping.stream().anyMatch(edge -> {
+				EObject mappedSource = extendedMapping.get(edge.getSource());
+				EObject mappedTarget = extendedMapping.get(edge.getTarget());
 				
-				Collection<Edge> edgesConcernedByThisMapping = edges.get(queryVertex);
-				boolean someEdgeHasBeenMadeImpossible = edgesConcernedByThisMapping.stream().anyMatch(edge -> {
-					EObject mappedSource = extendedMapping.get(edge.getSource());
-					EObject mappedTarget = extendedMapping.get(edge.getTarget());
-					
-					boolean edgeIsFullyMapped = mappedSource != null && mappedTarget != null;
-					if (!edgeIsFullyMapped) {
-						return false;
-					}
-					
-					boolean edgeExistsInHost = getReferencedTargets(mappedSource, edge.getType()).contains(mappedTarget);
-					boolean edgeHasBeenMadeImpossible = !edgeExistsInHost;
-					return edgeHasBeenMadeImpossible;
-				});
-				
-				if (someEdgeHasBeenMadeImpossible) {
-					return Stream.empty();
-				} else {
-					return Stream.of(extendedMapping);
+				boolean edgeIsFullyMapped = mappedSource != null && mappedTarget != null;
+				if (!edgeIsFullyMapped) {
+					return false;
 				}
+				
+				boolean edgeExistsInHost = getReferencedTargets(mappedSource, edge.getType()).contains(mappedTarget);
+				boolean edgeHasBeenMadeImpossible = !edgeExistsInHost;
+				return edgeHasBeenMadeImpossible;
 			});
 			
+			if (someEdgeHasBeenMadeImpossible) {
+				return Stream.empty();
+			}
+			
+			return generateMappings(without(host, hostVertex), tail(query), edges, extendedMapping);
 		});
+	}
+	
+	static private Stream<Map<Vertex, EObject>> generateMappings(Collection<EObject> host, List<Vertex> query, Map<Vertex, Collection<Edge>> edges) {
+		return generateMappings(host, query, edges, new HashMap<>());
 	}
 	
 	static Map<Vertex, Collection<Edge>> collectConcernedEdgesByVertex(Collection<Edge> edges) {
@@ -116,10 +119,8 @@ public class Interpreter {
 		return result;
 	}
 	
-	
-	
 	static Stream<Map<Vertex, EObject>> match(Collection<EObject> host, GraphQuery query) {
-		return generateMappings(host, query.getContainedVertices(), collectConcernedEdgesByVertex(query.getContainedEdges())); // .filter(mapping -> isMappingAMatch(mapping, query.getContainedEdges()));
+		return generateMappings(host, query.getContainedVertices(), collectConcernedEdgesByVertex(query.getContainedEdges()));
 	}
 	
 	static Stream<Map<Vertex, EObject>> match(EObject host, GraphQuery query) {

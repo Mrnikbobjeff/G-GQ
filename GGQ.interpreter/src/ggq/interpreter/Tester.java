@@ -181,5 +181,7 @@ public class Tester {
 		Interpreter.match(createHostGraph(), query)
 			.map(Tester::prettifyMatch)
 			.forEach(System.out::println);
+		
+		System.out.println("Iterations: " + Interpreter.iterationCounter);
 	}
 }
